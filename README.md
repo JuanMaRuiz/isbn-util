@@ -3,7 +3,7 @@
 
 # ISBN Util
 
-This module check if an isbn is valid or not and also provide method to generate a valid random isbn (10 or 13)
+This module check if an ISBN is valid or not and also provide a method to generate a valid random ISBN-10 or ISBN-13
 
 ## Install
 
@@ -31,8 +31,4 @@ generate('13');
 generate('10');
 //=> 'isbn-10: 8448122313'
 ```
-
-### Why this tool?
-
-// TBD
 
