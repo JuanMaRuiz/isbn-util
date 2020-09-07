@@ -18,5 +18,10 @@
     "coveralls": "^3.1.0",
     "eslint": "^7.7.0",
     "jest": "^26.4.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JuanMaRuiz/isbn-util.git"
+  },
+  "homepage": "https://github.com/JuanMaRuiz/isbn-util"
 }
