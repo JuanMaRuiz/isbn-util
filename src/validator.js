@@ -9,16 +9,18 @@ const hasCorrectFormat = value => value.length === validLengths.MIN || value.len
 const IsValidIsbn = isbn => {
   let result = false;
   const isbnAsArray = Array.from(isbn);
+  const controlDigit = isbnAsArray.pop();
 
   if (isbn.length === validLengths.MIN ) {
     const sumOfIsbnNumbers = isbnAsArray.map((el, index) => {
       return el * (index + 1);
     }).reduce((acc, curr) => acc + curr );
 
-    result = (sumOfIsbnNumbers % 11) === 0;
+    const modulus = sumOfIsbnNumbers % 11;
+
+    result = controlDigit.toUpperCase() === 'X' ? modulus === 10 : modulus === parseInt(controlDigit);
 
   } else {
-    const controlDigit = isbnAsArray.pop();
     const elementsSum = isbnAsArray.map((el, index) => (index + 1) % 2 === 0 ? el * 1 : el * 3).reduce((acc, curr) => acc + curr);
     const sumModule = elementsSum % 10;
 

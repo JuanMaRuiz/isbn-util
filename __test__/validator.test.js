@@ -8,6 +8,7 @@ test('validator should return TRUE if passed value is a valid 10 numbers ISBN ',
   expect(validator('84   481         2231        3')).toBe(true);
   expect(validator('8448122313')).toBe(true);
   expect(validator('84-481-2231-3')).toBe(true);
+  expect(validator('006095485X')).toBe(true);
 });
 
 test('should return FALSE if passed string does not have the correct lenght', () => {
