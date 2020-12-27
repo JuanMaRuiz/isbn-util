@@ -1,3 +1,6 @@
+## [1.1.1] - 2020-12-27
+### Fix
+* Fix validator to cover isbn-10 special case (ends with "X")
 ## [1.1.0] - 2020-09-07
 ### Added
 * Add "prefix" option to generator to produce output with or without 'isbn-[type]: ' string.
