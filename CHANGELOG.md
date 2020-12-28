@@ -1,3 +1,6 @@
+## [1.1.2] - 2020-12-29
+### Fix
+* Fix validator for valid isbn-13 returned as false
 ## [1.1.1] - 2020-12-27
 ### Fix
 * Fix validator to cover isbn-10 special case (ends with "X")
