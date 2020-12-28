@@ -18,6 +18,10 @@ test('should return FALSE if passed string does not have the correct lenght', ()
 });
 
 test('validator should return TRUE if passed value is a valid 13 numbers ISBN ', () => {
-  expect(validator('978-0137081073')).toBe(true);
   expect(validator('978-84-415-2682-2')).toBe(true);
+  expect(validator('978-34-2628-155-0')).toBe(true);
+});
+
+test('validator should return FALSE if passed value is NOT a valid 13 numbers ISBN ', () => {
+  expect(validator('978-0-306-40615-6')).toBe(false);
 });
