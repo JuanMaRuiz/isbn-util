@@ -22,12 +22,15 @@ const IsValidIsbn = isbn => {
 
   } else {
     const elementsSum = isbnAsArray.map((el, index) => (index + 1) % 2 === 0 ? el * 1 : el * 3).reduce((acc, curr) => acc + curr);
-    const sumModule = elementsSum % 10;
 
-    result = 10 - sumModule === parseInt(controlDigit);
+    result = getControlDigit(elementsSum) === parseInt(controlDigit);
   }
 
   return result;
+};
+
+const getControlDigit = (sum, acc = 0) => {
+  return sum % 10 !== 0 ? getControlDigit(sum + 1, acc + 1) : acc;
 };
 
 const validate = (isbn) => {
