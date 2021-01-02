@@ -3,7 +3,7 @@
 
 # ISBN Util
 
-This module check if an ISBN is valid or not and also provide a method to generate a valid random ISBN-10 or ISBN-13
+This module **check if an ISBN is valid** or not **and** also provide a method to **generate** a **valid random ISBN-10** or **ISBN-13**
 
 ## Install
 
