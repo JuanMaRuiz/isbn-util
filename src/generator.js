@@ -1,4 +1,4 @@
-const validator = require('./validator');
+import validate from './validator.js';
 const isbnTypes = {
   10: '10',
   13: '13'
@@ -20,11 +20,11 @@ const generator = (type = isbnTypes[10], option) => {
   const randomNumber = parseInt(Math.random() * parseInt(Math.pow(10,type)));
   if ( type === isbnTypes[type] ) {
     const tempIsbn = randomNumber.toString();
-    return validator(tempIsbn) ? `${prefix}${tempIsbn}` : generator(type, option);
+    return validate(tempIsbn) ? `${prefix}${tempIsbn}` : generator(type, option);
   } else {
     console.error('Invalid option. Pass "10" for isbn-10 and "13" for isbn-13');
     process.exit(1);
   }
 };
 
-module.exports = generator;
+export default generator;

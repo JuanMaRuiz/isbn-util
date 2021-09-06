@@ -1,9 +1,9 @@
-const generator = require('./../src/generator.js');
-const validator = require('./../src/validator.js');
+import generator from './../src/generator.js';
+import validate from './../src/validator.js';
 
 test('should return a valid isbn according with the passed param', () => {
   const validIsbn = generator('10');
-  expect(validator(validIsbn)).toBe(true);
+  expect(validate(validIsbn)).toBe(true);
 });
 
 test('should return a isbn string with the correct length depending on when "title" attribute is not passed', () => {
