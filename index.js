@@ -1,7 +1,4 @@
-const validate = require('./src/validator.js');
-const generate = require('./src/generator.js');
+import validate from './src/validator.js';
+import generate from './src/generator.js';
 
-module.exports = {
-  validate,
-  generate
-};
+export { validate, generate };

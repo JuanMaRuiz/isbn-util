@@ -44,4 +44,4 @@ const validate = (isbn) => {
   return result;
 };
 
-module.exports = validate;
+export default validate;
