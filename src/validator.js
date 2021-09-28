@@ -21,7 +21,7 @@ const IsValidIsbn = isbn => {
     result = controlDigit.toUpperCase() === 'X' ? modulus === 10 : modulus === parseInt(controlDigit);
 
   } else {
-    const elementsSum = isbnAsArray.map((el, index) => (index + 1) % 2 === 0 ? el * 1 : el * 3).reduce((acc, curr) => acc + curr);
+    const elementsSum = isbnAsArray.map((el, index) => index % 2 === 0 ? el * 1 : el * 3).reduce((acc, curr) => acc + curr);
 
     result = getControlDigit(elementsSum) === parseInt(controlDigit);
   }
@@ -30,7 +30,13 @@ const IsValidIsbn = isbn => {
 };
 
 const getControlDigit = (sum, acc = 0) => {
-  return sum % 10 !== 0 ? getControlDigit(sum + 1, acc + 1) : acc;
+  if (sum % 10 !== 0) {
+    return getControlDigit(sum + 1, acc + 1);
+  } else if (sum % 10 === 0 && acc === 0) {
+    return 0;
+  } else {
+    return acc;
+  }
 };
 
 const validate = (isbn) => {
