@@ -1,9 +1,14 @@
-## [1.1.2] - 2020-12-29
-### Chore
-* Breaking change. Convert package to esm module.
-## [2.0.0] - 2021-09-06
+## [2.0.1] - 2021-09-28
 ### Fix
 * Fix validator for valid isbn-13 returned as false
+
+## [2.0.0] - 2021-09-06
+### Chore
+* Breaking change. Convert package to esm module.
+### Fix
+* Fix validator for valid isbn-13 returned as false
+
+## [1.1.2] - 2020-12-29
 ## [1.1.1] - 2020-12-27
 ### Fix
 * Fix validator to cover isbn-10 special case (ends with "X")
